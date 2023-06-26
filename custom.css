@@ -1,0 +1,774 @@
+body{
+  position:relative;
+}
+  .button-inline {
+    display: flex;
+}
+  .images_poup {
+    width: 100%;
+}
+  .grid__item.product__media-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+  .popup-open {
+    background: #cdcdcd;
+    overflow: hidden;
+    z-index: 999;
+}
+  .popup-contai .images_poup {
+    width: 50%;
+}
+ .popup-contai .price-section {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.popup-container .main_content p {
+    margin: 0;
+    padding-top: 0;
+}
+  .popup-container input#myInput {
+    padding: 5px;
+    border: 1px solid;
+}
+
+.tshirt_image_left {
+    display: flex;
+}
+ .popup-container input#myInput:focus-visible {
+    outline: none;
+   box-shadow: none;
+}
+.popup-container .main_content button {
+    padding: 6px 15px;
+    background: #000;
+    color: #ffffff;
+}
+
+.drawing-area {
+  position: absolute;
+  top: 100px;
+  left: 140px;
+  z-index: 10;
+  width: 150px;
+  height: 200px;
+}
+.button-section {
+    display: none;
+}
+.canvas-container {
+  width: 100%;
+  position: relative;
+  user-select: none;
+}
+
+.button-div {
+    flex-wrap: wrap;
+    align-items: end;
+    display: flex;
+}
+#tshirt-div {
+  position: relative;
+  background-color: #fff;
+}
+div#tshirt-div img {
+    width: 100%;
+}
+#canvas {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  left: 0px;
+  top: 0px;
+  user-select: none;
+  cursor: default;
+}
+
+   .spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      border-top-color: #3498db;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      position: fixed;
+      margin-left: 8%;
+      margin-top: 0.7%;
+    }
+   
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .parentofinput{
+      display:flex
+    }
+    #loader {
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .section-template--19088117989656__main-padding {
+    position: unset;
+}
+    #loader:after {
+      content: "";
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 6px solid #3e3e3e;
+      border-color: #3e3e3e transparent #3e3e3e transparent;
+      animation: loader 1.2s linear infinite;
+    }
+    
+    @keyframes loader {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+/* .button-addtocart{
+  display:none; */
+}
+
+.backdrop {
+  display: none; /* Hide the backdrop by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9998; /* Behind the popup */
+}
+
+.popup-container {
+    display: none;
+    background-color: #fff;
+      max-width: 800px;
+    z-index: 9999;
+}
+.popup-container-saved {
+    display: none;
+    width: 94%;
+    position: fixed;
+    max-width: 900px;
+    left: 49%;
+    background: #fff;
+    padding: 20px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+.tshirt_image_left img {
+    width: 100%;
+}
+div#popupContent {
+    padding: 20px;
+    position: relative;
+  display:flex;
+}
+  div#closePopup {
+    top: -24px;
+    padding: 0 !important;
+    border-radius: 12px;
+    background: #fff;
+    position: absolute;
+    right: -15px;
+}
+  button#closeSavedPopup {
+    background: transparent;
+    border: none;
+}
+
+.popup-container {
+    width:94%;
+    position:fixed;
+    max-width: 900px;
+    left: 49%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-open:after {
+    background: #000000ab;
+    position: absolute;
+    content: '';
+    width: 100vw;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    z-index: 9;
+    bottom: 0px;
+} 
+.popup-container .main_content p {
+    margin: 0;
+    padding-top: 0;
+    font-size: 19px;
+    line-height: 24px;
+  color:#000;
+}
+.popup-container input#myInput {
+    padding: 12px;
+    border: 1px solid;
+}
+.send_btn\" {
+    margin-top: 9px;
+}
+.tshirt_image_left {
+    display: flex;
+}
+ .popup-container input#myInput:focus-visible {
+    outline: none;
+   box-shadow: none;
+}
+.popup-container .main_content button {
+    padding: 8px 32px;
+    background: #000;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+}
+.product__column-sticky {
+    width: 100%!important;
+}
+  div#closePopup {
+    margin-top: 39px;
+}
+  div#closePopup {
+    margin-top: 39px;
+    margin: 5px 0;
+}
+/********Product page css************/
+.product_flex {  width: 100%; grid-template-columns: repeat(2,1fr);gap: 30px; }
+.product.product--large.product--left.product--stacked {max-width: 100%;}
+.drawing-area {  top: 43% !important; left: 50% !important; transform: translate(-50%, -50%) !important; }
+.product_description p { font-size: 20px; line-height: 1.2; color: #000; }
+.product_description label { font-size: 16px; font-weight: 600; color: #000;display: block; }
+.product_description input#myInput { width: calc(100% - 120px) !important; height: 40px; border: 1px solid #bfbfbf; border-radius: 5px;padding: 5px; }
+.product_description button { max-width: 150px; width: 100%; height: 40px; background: #000; color: #fff; border: 0; font-size: 16px; font-weight: 500; }
+.product_description p.product__text { text-align: left !important; padding-top: 20px; color: #000; font-size: 20px; }
+.product__title{margin: 0;}
+.product__title h1 { text-align: left; font-size: 35px; font-weight: 500; color: #000; } h1 { text-align: left; font-size: 35px; font-weight: 500; color: #000; }
+.product__inventory.visibility-hidden:empty {display: none !important;}/**********Display none p tag**********/
+.draw_image_flex { display: grid; grid-template-columns: repeat(5,1fr); overflow: hidden; width: 100%;gap: 10px; }
+.draw_image_flex img {max-width: 100% !important;}
+.product__column-sticky{position: unset !important;}
+.product_description { position: sticky !important; top: 3rem; z-index: 2; height: fit-content; }
+#tshirt-div{height: auto !important;}
+.product_description input#myInput:focus{outline: none;box-shadow: none !important;}
+.drawing-area {z-index: 0 !important;}
+
+div#tshirt-div {
+    position: relative;
+}
+.images_poup {
+    width: 50%!important;
+}
+.main_content {
+    width: 60%;
+}
+.price-section {
+    font-size: 21px;
+    font-weight: 600;
+}
+.main_content label {
+    font-size: 16px;
+}
+.btn\|_group {
+    display: flex;
+    gap: 12px;
+}
+
+
+div#closePopup {
+    display: flex;
+    justify-content: end;
+    padding-bottom: 10px;
+}
+  .tshirt_image_left {
+    gap:30px;
+}
+
+.flex-inline {
+    display: flex;
+    width: 100%;
+}
+
+  .button-div {
+    width: 30%;
+}
+  .button-div div button {
+    padding: 8px 32px;
+    background: #000;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+}
+.canvas-container img {
+    width: 100%;
+}
+.tshirt_image_left-b {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+}
+div#popupContentsaved {
+    top: -24px;
+    padding: 0 !important;
+    border-radius: 12px;
+    background: #fff;
+    position: absolute;
+    right: -15px;
+}
+.flex-inline {
+    position: relative;
+}
+.canvas-container {
+    border: 1px solid #e9e9e9;
+}
+.canvas-container {
+    border: none !important;
+}
+.tshirt_image_left button#changeBackground {
+    background: #000;
+    color: #fff;
+    padding: 5px 14px;
+    margin-top: 10px;
+    font-size: 19px;
+}
+.main_content {
+    position: relative;
+    display: flex;
+}
+.tshirt_image_right {
+    width: 50%!important;
+  display:none;
+}
+.right_text_pro {
+    width: 60%;
+}
+.product_description button {
+	cursor: pointer;
+}
+.pop_inner {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.pop_inner .tshirt_image_left {
+	width: 100%;
+}
+.pop_inner  .tshirt_image_right {
+	width: 100% !important;
+}
+.pop_inner .img_col {
+	width: 50%;
+}
+.pop_inner .images_poup {
+	width: 100% !important;
+}
+.pop_inner .main_content {
+	width: 50%;
+    padding-left:40px;
+    padding-top: 20px;
+}
+.pop_inner .images_poup {
+	width: 100% !important;
+	position: relative;
+}
+.pop_inner  .next_back_btn .btn {
+	background: transparent  !important;
+	outline: none !important;
+	border: none !important;
+	box-shadow: none !important;
+	max-width: 40px;
+	padding: 0  !important;
+}
+.popup-container .main_content button {
+	padding: 13px 32px;
+    cursor: pointer;
+}
+.pop_inner  .next_back_btn {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	margin: 0;
+}
+.tshirt_image_left .next_back_btn {
+	right: 10px;
+	left: auto;
+}
+.pop_inner .next_back_btn img {
+	max-width: 100%;
+}
+.pop_inner .tshirt_image_right {
+	position: relative;
+}
+.popup-container .main_content button {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.tshirt_image_right .next_back_btn img {
+	transform: rotate(180deg);
+}
+.right_text_pro {
+	width: 100%;
+}
+.popup-container .main_content p {
+	font-size: 16px;
+	line-height: 22px;
+	margin-top: 10px;
+}
+#closePopup img {
+	cursor: pointer;
+}
+.popup-container .main_content button {
+	line-height: 30px !important;
+}
+.button-section {
+	margin-top: 20px;
+}
+#popupContainersaved img {
+	max-width: 100%;
+}
+#popupContainersaved .flex-inline {
+	flex-wrap: wrap;
+  padding: 30px;
+}
+#popupContainersaved .tshirt_image_left-b {
+	justify-content: center;
+	align-items: initial;
+	flex-wrap: wrap;
+	max-height: 390px;
+width: 100%;
+}
+.shirt_img {
+	width: 50%;
+}
+.desc_text {
+	width: 100%;
+}
+.desc_text .button-div {
+	width: 100%;
+	justify-content: center;
+}
+.desc_text {
+	text-align: center;
+}
+.desc_text .select-size {
+	width: 100%;
+	max-width: 140px;
+	height: 40px;
+	/* text-align: center; */
+	font-size: 18px;
+	text-align: center;
+}
+div#popupContentsaved {
+	background: transparent;
+}
+div#popupContentsaved img {
+	background: #fff;
+	border-radius: 10px;
+}
+.desc_text .select-size option {
+	text-align: center;
+}
+.button-div div button {
+	padding: 12px 30px;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 16px;
+}
+#closeSavedPopup {
+	cursor: pointer;
+}
+.popup-container .main_content button {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    line-height: 1 !important;
+}
+.popup-container #myInput {
+    padding: 12px;
+    width: 100%;
+    border: 1px solid;
+    resize: none;
+    outline: none;
+    box-shadow: none;
+  height:150px;
+}
+.popup-container .button-inline {
+    display: flex;
+    flex-wrap: wrap;
+}
+/***********Responsive***********/
+
+@media only screen and (max-width:767px) {
+  #popupContainer {
+	max-width: 375px;
+}
+  div#closePopup {
+	z-index: 1;
+}
+.tshirt_image_left .next_back_btn {
+	right: 5px;
+  left: auto !important;
+}
+.pop_inner .next_back_btn {
+	left: 5px;
+}
+#popupContainersaved {
+	max-width: 375px;
+}
+  #popupContainersaved .tshirt_image_left-b {
+	justify-content: center;
+	align-items: initial;
+	flex-wrap: wrap;
+	max-height: 140px;
+	width: 100%;
+}
+  #tshirt-canvas1 {
+	left: 50% !important;
+	top: 50% !important;
+	transform: translate(-50%, -50%);
+	width: 98px !important;
+	height: 131px !important;
+}
+  .pop_inner .img_col {
+	width: 100%;
+}
+  .right_text_pro {
+	width: 100% !important;
+}
+  div#popupContent {
+	padding: 10px !important;
+}
+  .popup-container .main_content {
+	padding: 20px 0 0;
+	width: 100% !important;
+}
+  .desc_text .select-size {
+	width: 100%;
+	max-width: 100px;
+	height: 35px;
+	font-size: 16px;
+	text-align: center;
+}
+  .tshirt_image_left {
+    flex-wrap: wrap;
+    gap:30px;
+}
+  .close_btn {
+    display: block;
+}
+
+  .btn\|_group {
+    display: flex;
+    gap: 10px;
+}
+  .popup-container .main_content button {
+    font-size: 16px!important;
+    border: none;
+}
+
+  div#popupContent {
+    max-width: 333px;
+    margin: 0 auto;
+    padding:20px;
+}
+  .popup-container .main_content {
+    margin-left: 0;
+    width: 100%;
+}
+  .images_poup {
+    width: 100%;
+    padding-bottom: 0;
+}
+
+  .images_poup {
+    width: 100%;
+    padding-bottom: 20px;
+}
+  div#tshirt-div img#tshirt-backgroundpicture {
+    max-width: 100%;
+}
+  div#tshirt-div {
+    width: 100% !important;
+}
+
+  .images_poup {
+    width: 100%!important;
+}
+  .product__column-sticky {
+    width: 100%!important;
+}
+  .grid__item.product__media-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+  div#closePopup {
+    margin-top: 0!important;
+}
+
+  .popup-container .main_content button {
+width:100%;}
+.button-addtocart {
+    width: 100%;
+}
+  .popup-container input#myInput {
+    width: 100%;
+}
+   .price-section {
+    font-size: 21px;
+    text-align: center;
+    font-weight: 600;
+}
+
+}
+/***********Responsive***********/
+
+@media only screen and (max-width: 767px) {
+  .tshirt_image_left {
+    flex-wrap: wrap;
+    gap:30px;
+}
+  .close_btn {
+    display: block;
+}
+
+  .btn\|_group {
+    display: flex;
+    gap: 10px;
+}
+  .popup-container .main_content button {
+    font-size: 16px!important;
+    border: none;
+}
+
+
+  .popup-container .main_content {
+    margin-left: 0;
+    width: 100%;
+}
+  .images_poup {
+    width: 100%;
+    padding-bottom: 0;
+}
+  .popup-container .main_content {
+    width: 100%!important;
+}
+  .images_poup {
+    width: 100%;
+    padding-bottom: 20px;
+}
+  div#tshirt-div img#tshirt-backgroundpicture {
+    max-width: 100%;
+}
+  div#tshirt-div {
+    width: 100% !important;
+}
+
+  .images_poup {
+    width: 100%!important;
+}
+  .product__column-sticky {
+    width: 100%!important;
+}
+  .grid__item.product__media-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+  div#closePopup {
+    margin-top: 0!important;
+}
+  div#popupContent {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    width:94%;
+}
+  .popup-container .main_content button {
+width:100%;}
+.button-addtocart {
+    width: 100%;
+}
+  .popup-container input#myInput {
+    width: 100%;
+}
+   .price-section {
+    font-size: 21px;
+    text-align: center;
+    font-weight: 600;
+}
+  .popup-container {
+    width:84%;
+    top:50%;
+
+}
+  .popup-open {
+    grid: unset;
+      position: fixed;
+
+}
+canvas#tshirt-canvas {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+    width: 98px !important;
+    height: 131px !important;
+}
+ .button-inline {
+    flex-wrap: wrap;
+    display: flex;
+} 
+  input#myInput {
+    margin-bottom: 8px;
+}
+    .flex-inline {
+    flex-wrap: wrap;
+}
+
+  .tshirt_image_left-b {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.button-div {
+    width: 100%;
+    padding-top: 20px;
+}
+  button#closeSavedPopup {
+    border: none;
+    background: transparent;
+}
+
+
+}

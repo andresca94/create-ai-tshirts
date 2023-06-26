@@ -1,0 +1,56 @@
+{
+  "sections": {
+    "main": {
+      "type": "customized-product",
+      "blocks": {
+        "9cb1f481-84eb-4d5e-854b-24c04ae2f801": {
+          "type": "text",
+          "settings": {
+            "text_style": "body"
+          }
+        },
+        "0c3b5f49-c5ac-416e-99e1-65c410feb8da": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "8e26c8d0-8b7c-454a-bc45-f284a047d6ab": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "e1958918-767f-4d18-8515-451f1eef44aa": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
+        }
+      },
+      "block_order": [
+        "9cb1f481-84eb-4d5e-854b-24c04ae2f801",
+        "0c3b5f49-c5ac-416e-99e1-65c410feb8da",
+        "8e26c8d0-8b7c-454a-bc45-f284a047d6ab",
+        "e1958918-767f-4d18-8515-451f1eef44aa"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
