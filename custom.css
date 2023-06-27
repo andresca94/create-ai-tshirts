@@ -264,7 +264,7 @@ div#popupContent {
 .product__title{margin: 0;}
 .product__title h1 { text-align: left; font-size: 35px; font-weight: 500; color: #000; } h1 { text-align: left; font-size: 35px; font-weight: 500; color: #000; }
 .product__inventory.visibility-hidden:empty {display: none !important;}/**********Display none p tag**********/
-.draw_image_flex { display: grid; grid-template-columns: repeat(5,1fr); overflow: hidden; width: 100%;gap: 10px; }
+.draw_image_flex { display: grid; grid-template-columns: repeat(4,1fr); overflow: hidden; width: 100%;gap: 10px; }
 .draw_image_flex img {max-width: 100% !important;}
 .product__column-sticky{position: unset !important;}
 .product_description { position: sticky !important; top: 3rem; z-index: 2; height: fit-content; }
