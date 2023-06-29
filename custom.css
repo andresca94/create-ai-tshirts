@@ -140,10 +140,6 @@ div#tshirt-div img {
       }
     }
 
-/* .button-addtocart{
-  display:none; */
-}
-
 .backdrop {
   display: none; /* Hide the backdrop by default */
   position: fixed;
