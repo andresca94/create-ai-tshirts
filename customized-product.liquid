@@ -1086,21 +1086,21 @@ fetch(url, {
   
 // Delete selected image when the delete button is clicked
 const deleteButton = document.getElementById("deleteButton");
-
-deleteButton.addEventListener("click", function() {
-  // Remove the last added image from the array and canvas
-  var lastAddedImage = addFrontImages.pop();
-  if (lastAddedImage instanceof fabric.Image) {
-    canvas.remove(lastAddedImage);
-    canvas.discardActiveObject();
-    canvas.renderAll();
-    frontImageURL=null;
-    if (addFrontImages.length === 0) {
-      hideDeleteButton();
-      hideButtonSection();
+  deleteButton.addEventListener("click", function() {
+  // Remove all previous added images from the array and canvas
+  while (addFrontImages.length > 0) {
+    var lastAddedImage = addFrontImages.pop();
+    if (lastAddedImage instanceof fabric.Image) {
+      canvas.remove(lastAddedImage);
     }
   }
+  canvas.discardActiveObject();
+  canvas.renderAll();
+  frontImageURL = null;
+  hideDeleteButton();
+  hideButtonSection();
 });
+
 
 function showDeleteButton() {
   deleteButton.style.display = "block";
@@ -1136,18 +1136,17 @@ const deleteBackImage = document.getElementById("deleteBackImage");
 
 deleteBackImage.addEventListener("click", function() {
   // Remove the last added image from the array and canvas
+   while (addedImages.length > 0) {
   var lastAddedImage = addedImages.pop();
   if (lastAddedImage instanceof fabric.Image) {
-    backImageURL=null;
     canvas1.remove(lastAddedImage);
-    canvas1.discardActiveObject();
-    canvas1.renderAll();
-    
-    if (addedImages.length === 0) {
-      hideDeleteBackButton();
-      hideButtonSection();
     }
   }
+    backImageURL=null;
+    canvas1.discardActiveObject();
+    canvas1.renderAll();
+    hideDeleteBackButton();
+    hideButtonSection();
 });
 
 function showDeleteBackButton() {
