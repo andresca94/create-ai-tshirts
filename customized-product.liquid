@@ -778,7 +778,7 @@ let url = window.location.href
 };
 
 try {
-  const response = await fetch("https://blair-breath-authorization-contests.trycloudflare.com/api/authentication", requestOptions);
+  const response = await fetch("https://random-outfits.fly.dev/api/authentication", requestOptions);
   const result = await response.json();
   return result;
 } catch (error) {
@@ -905,7 +905,7 @@ tshirtRightDiv.style.display = 'none';
               //hit api to create product on printify and get the product image mockups
 let url1 = window.location.href
  const domain = new URL(url1).hostname;
-const url = `https://blair-breath-authorization-contests.trycloudflare.com/api/createProduct?shop=${domain}`;
+const url = `https://random-outfits.fly.dev/api/createProduct?shop=${domain}`;
 const payload = { value: "product-details",
                  data:{frontImage:frontImageURL,backImage:backImageURL, productTitle:productTitle, productDescription:productDescription, basePrice:basePrice,}
                 };
@@ -996,7 +996,7 @@ fetch(url, {
     // Hit API to create a product on Printify and get the product image mockups
     let url1 = window.location.href
  const domain = new URL(url1).hostname;
-    const url = `https://blair-breath-authorization-contests.trycloudflare.com/api/addToCart?shop=${domain}`;
+    const url = `https://random-outfits.fly.dev/api/addToCart?shop=${domain}`;
     const payload = {
       value: "add to cart",
       data: {
@@ -1212,7 +1212,7 @@ var body = document.body;
 
   let url1 = window.location.href
  const domain = new URL(url1).hostname;
-const url = `https://blair-breath-authorization-contests.trycloudflare.com/api/input?shop=${domain}`;
+const url = `https://random-outfits.fly.dev/api/input?shop=${domain}`;
 const payload = { value: value};
 
   let authorizationkey;
