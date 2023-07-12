@@ -603,18 +603,29 @@
                  <img src="https://cdn.shopify.com/s/files/1/0724/9005/8008/files/close-button_1.png?v=1685711012"/>
         </div>
       <!-- Create the container of the tool -->
+    
      <div class="pop_inner"> 
-       <div class="img_col">
+       <div class="img_col"> 
+         <div class="button_grup">
+         <button id="changeBackground" onclick="changeBackground()" class="btn">Front Side</button>
+         <button id="changeBackground" onclick="changeBackgroundBack()" class="btn">Back Side</button>
+         </div>
         <div class="tshirt_image_left">
+          
           <div class="images_poup">
+
             <div id="tshirt-div">
             <img id="tshirt-backgroundpicture" src="https://printify.com/cdn-cgi/image/width=432,quality=75,format=avif/https://images.printify.com/api/catalog/5d11fd676eb51d0006494261.jpg?s=432"/>
               <div id="drawingArea" class="drawing-area">					
-                <div class="canvas-container">
+                <div class="canvas-container delete_btn">
+                  <button id='deleteButton' class="delete_btn1" style="display: none">
+                    <img src="https://cdn.shopify.com/s/files/1/0792/5832/1196/files/delete_2.png?v=1689080472"/>
+                  </button>
                     <canvas id="tshirt-canvas" width="150" height="200"></canvas>
                 </div>
             </div>
             </div>
+
             <div id="image-container" class="draw_image_flex">
                   <img onclick="updateTshirtImage(this.src)" src=""/>
                   <img onclick="updateTshirtImage(this.src)" src=""/>
@@ -622,7 +633,7 @@
                   <img onclick="updateTshirtImage(this.src)" src=""/>
             </div>
             <div class="next_back_btn">
-            <button id="changeBackground" onclick="changeBackground()" class="btn"><img src="https://cdn.shopify.com/s/files/1/0724/9005/8008/files/next-icon.png"></button>
+<!--             <button id="changeBackground" onclick="changeBackground()" class="btn"><img src="https://cdn.shopify.com/s/files/1/0724/9005/8008/files/next-icon.png"></button> -->
             </div>
         </div>
         </div>
@@ -630,10 +641,14 @@
                <!--  <========================================back image====================================>  -->
 
            <div class="tshirt_image_right">
+
      <div id="tshirt-div">
          <img id="tshirt-backgroundpicture" src="https://printify.com/cdn-cgi/image/width=432,quality=75,format=avif/https://images.printify.com/api/catalog/5d11fd656eb51d0096146fca.jpg?s=432" />
          <div id="drawingArea" class="drawing-area">
-             <div class="canvas-container">
+             <div class="canvas-container delete_btn">
+               <button id='deleteBackImage' class="delete_btn1" style="display: none">
+                 <img src="https://cdn.shopify.com/s/files/1/0792/5832/1196/files/delete_2.png?v=1689080472"/>
+               </button>
                  <canvas id="tshirt-canvas1" width="150" height="200"></canvas>
              </div>
          </div>
@@ -646,7 +661,7 @@
          <img onclick="updateTshirtBackImage(this.src)" src=""/>
      </div>
               <div class="next_back_btn">
-     <button id="changeBackground" onclick="changeBackground()" class="btn"><img src="https://cdn.shopify.com/s/files/1/0724/9005/8008/files/next-icon.png"></button>
+<!--      <button id="changeBackground" onclick="changeBackground()" class="btn"><img src="https://cdn.shopify.com/s/files/1/0724/9005/8008/files/next-icon.png"></button> -->
  </div> </div></div>
             <div class="main_content">
             
@@ -763,7 +778,7 @@ let url = window.location.href
 };
 
 try {
-  const response = await fetch("https://random-ai.fly.dev/api/authentication", requestOptions);
+  const response = await fetch("https://blair-breath-authorization-contests.trycloudflare.com/api/authentication", requestOptions);
   const result = await response.json();
   return result;
 } catch (error) {
@@ -811,15 +826,30 @@ try {
    var tshirtLeftDiv = document.querySelector('.tshirt_image_left');
   var tshirtRightDiv = document.querySelector('.tshirt_image_right');
   // Toggle the visibility of the t-shirt divs
+  if (tshirtRightDiv.style.display !== 'none') {
+    tshirtRightDiv.style.display = 'none';
+    tshirtLeftDiv.style.display = 'block';
+  }
+  // else {
+  //   tshirtLeftDiv.style.display = 'block';
+  //   tshirtRightDiv.style.display = 'none';
+  // }
+}
+
+function changeBackgroundBack() {
+   var tshirtLeftDiv = document.querySelector('.tshirt_image_left');
+  var tshirtRightDiv = document.querySelector('.tshirt_image_right');
+  // Toggle the visibility of the t-shirt divs
   if (tshirtLeftDiv.style.display !== 'none') {
     tshirtLeftDiv.style.display = 'none';
     tshirtRightDiv.style.display = 'block';
-  } else {
-    tshirtLeftDiv.style.display = 'block';
-    tshirtRightDiv.style.display = 'none';
   }
 }
 
+
+
+
+  
 
 
   // Function update price
@@ -875,7 +905,7 @@ tshirtRightDiv.style.display = 'none';
               //hit api to create product on printify and get the product image mockups
 let url1 = window.location.href
  const domain = new URL(url1).hostname;
-const url = `https://random-designs.fly.dev/api/createProduct?shop=${domain}`;
+const url = `https://blair-breath-authorization-contests.trycloudflare.com/api/createProduct?shop=${domain}`;
 const payload = { value: "product-details",
                  data:{frontImage:frontImageURL,backImage:backImageURL, productTitle:productTitle, productDescription:productDescription, basePrice:basePrice,}
                 };
@@ -966,7 +996,7 @@ fetch(url, {
     // Hit API to create a product on Printify and get the product image mockups
     let url1 = window.location.href
  const domain = new URL(url1).hostname;
-    const url = `https://random-designs.fly.dev/api/addToCart?shop=${domain}`;
+    const url = `https://blair-breath-authorization-contests.trycloudflare.com/api/addToCart?shop=${domain}`;
     const payload = {
       value: "add to cart",
       data: {
@@ -1035,7 +1065,8 @@ fetch(url, {
 
     
 // <------------------------------------updateTshirt=front---------------------------->
-       var frontImageURL;       
+       var frontImageURL;
+        var addFrontImages=[]
     function updateTshirtImage(imageURLFront,src) {
       frontImageURL=imageURLFront;
       showButtonSection()
@@ -1045,14 +1076,46 @@ fetch(url, {
     canvas.centerObject(img);
     img.set({ selectable: false }); // Disable image selection
     canvas.add(img);
-    canvas.renderAll();
-  });
+    // canvas.setActiveObject(img);
+    canvas.renderAll();   
+    addFrontImages.push(img);
+    showDeleteButton()
+  });    
    }
 
+  
+// Delete selected image when the delete button is clicked
+const deleteButton = document.getElementById("deleteButton");
+
+deleteButton.addEventListener("click", function() {
+  // Remove the last added image from the array and canvas
+  var lastAddedImage = addFrontImages.pop();
+  if (lastAddedImage instanceof fabric.Image) {
+    canvas.remove(lastAddedImage);
+    canvas.discardActiveObject();
+    canvas.renderAll();
+    frontImageURL=null;
+    if (addFrontImages.length === 0) {
+      hideDeleteButton();
+      hideButtonSection();
+    }
+  }
+});
+
+function showDeleteButton() {
+  deleteButton.style.display = "block";
+}
+
+function hideDeleteButton() {
+  deleteButton.style.display = "none";
+}
+
+  
 
 // <------------------------------------updateTshirt=back---------------------------->
 
  var backImageURL; 
+  var addedImages = [];
     function updateTshirtBackImage(imageURLBack) {
       backImageURL=imageURLBack;
       showButtonSection()
@@ -1060,20 +1123,57 @@ fetch(url, {
     img.scaleToHeight(200);
     img.scaleToWidth(150);
     canvas1.centerObject(img);
-    img.set({ selectable: false }); // Disable image selection
+    img.set({ selectable: true }); // Disable image selection
     canvas1.add(img);
+    // canvas1.setActiveObject(img)
     canvas1.renderAll();
+    addedImages.push(img);
+   showDeleteBackButton();
   });
    }
 
+const deleteBackImage = document.getElementById("deleteBackImage");
+
+deleteBackImage.addEventListener("click", function() {
+  // Remove the last added image from the array and canvas
+  var lastAddedImage = addedImages.pop();
+  if (lastAddedImage instanceof fabric.Image) {
+    backImageURL=null;
+    canvas1.remove(lastAddedImage);
+    canvas1.discardActiveObject();
+    canvas1.renderAll();
+    
+    if (addedImages.length === 0) {
+      hideDeleteBackButton();
+      hideButtonSection();
+    }
+  }
+});
+
+function showDeleteBackButton() {
+  deleteBackImage.style.display = "block";
+}
+
+function hideDeleteBackButton() {
+  deleteBackImage.style.display = "none";
+}
+
+// <==================================showsave design button===============================>  
 
 function showButtonSection() {
   var buttonSection = document.querySelector('.button-section');
-  if(frontImageURL && backImageURL){
+  if(frontImageURL || backImageURL){
   buttonSection.style.display = 'block';
-    }
-}
+    } 
+};
 
+
+function hideButtonSection(){
+    var buttonSection = document.querySelector('.button-section');
+     if(frontImageURL==null && backImageURL==null){
+      buttonSection.style.display = 'none';
+    }
+};
 
 
 
@@ -1112,7 +1212,7 @@ var body = document.body;
 
   let url1 = window.location.href
  const domain = new URL(url1).hostname;
-const url = `https://random-designs.fly.dev/api/input?shop=${domain}`;
+const url = `https://blair-breath-authorization-contests.trycloudflare.com/api/input?shop=${domain}`;
 const payload = { value: value};
 
   let authorizationkey;
