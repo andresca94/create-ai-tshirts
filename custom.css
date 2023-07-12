@@ -284,11 +284,33 @@ div#tshirt-div {
 .main_content label {
     font-size: 16px;
 }
+button#deleteButton {
+    left: 119px;
+    position: relative;
+}
+button#deleteBackImage {
+    position: relative;
+    left: 119px;
+}
 .btn\|_group {
     display: flex;
     gap: 12px;
 }
-
+.delete_btn button#deleteButton,.canvas-container.delete_btn button#deleteBackImage{
+    background: none;
+    border: none;
+}
+ .button_grup {
+    text-align: center;
+    margin: 10px -2px;
+}
+  .button_grup button {
+    padding: 8px 32px;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+}
 
 div#closePopup {
     display: flex;
@@ -687,6 +709,7 @@ width:100%;}
   .popup-container .main_content {
     width: 100%!important;
 }
+ 
   .images_poup {
     width: 100%;
     padding-bottom: 20px;
